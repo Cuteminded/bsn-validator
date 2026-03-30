@@ -3,6 +3,11 @@ tsup.config.ts
 
 .env
 .DS_Store
+.gitignore
+.gitattributes
+
+/.git
 /src
 /test
+/.vscode
 /node_modules
