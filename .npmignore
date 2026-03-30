@@ -4,4 +4,5 @@ tsup.config.ts
 .env
 .DS_Store
 /src
+/test
 /node_modules
