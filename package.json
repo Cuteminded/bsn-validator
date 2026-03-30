@@ -1,25 +1,28 @@
 {
   "name": "bsn-validator",
   "description": "A simple validator for Dutch BSN (Burgerservicenummer) numbers.",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "homepage": "https://lizzy.nu/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Cuteminded/bsn-validator.git"
+    "url": "git+https://github.com/Cuteminded/bsn-validator.git"
   },
   "scripts": {
     "build": "tsup",
+    "publish": "npm run build && npm publish",
     "test": "npm run build && node --test test/*.test.js"
   },
   "keywords": [
     "dutch",
     "bsn",
-    "burgerservicenummer",
+    "BSN",
+    "validator",
     "netherlands",
-    "validator"
+    "burgerservicenummer",
+    "Burger Service Nummer"
   ],
   "author": "Lizzy / CuteMinded",
   "license": "MIT",
