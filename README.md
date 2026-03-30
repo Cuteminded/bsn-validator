@@ -58,8 +58,8 @@ isValidBSN("abc");
 Generates a fake BSN-like value intended for testing and development.
 
 Notes:
-- Do not use generated values for real identity or production workflows.
-- This utility is intended for mock data and local/test environments.
+- Generated values may coincide with a real BSN they are not guaranteed to be fictitious.
+- The generated values are primarily intended for testing the application you are developing, not for real identity or production workflows.
 
 ## Use Cases
 
