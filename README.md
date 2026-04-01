@@ -4,8 +4,16 @@ A tiny TypeScript/JavaScript package for validating Dutch BSN (Burgerservicenumm
 
 ## Install
 
+### npm
+
 ```bash
 npm install bsn-validator
+```
+
+### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bsn-validator/dist/index.global.js"></script>
 ```
 
 ## Quick Start
@@ -14,9 +22,14 @@ npm install bsn-validator
 
 ```js
 const { isValidBSN, generateFakeBSN } = require("bsn-validator");
+const input = "123456782";
+const fakeBSN = generateFakeBSN();
 
-console.log(isValidBSN("123456782")); // true/false
-console.log(generateFakeBSN()); // e.g. "123456789"
+if (isValidBSN(input)) {
+  console.log("Valid BSN");
+}
+
+console.log(fakeBSN);
 ```
 
 ### TypeScript / ESM
@@ -25,13 +38,29 @@ console.log(generateFakeBSN()); // e.g. "123456789"
 import { isValidBSN, generateFakeBSN } from "bsn-validator";
 
 const input = "123456782";
+const fakeBSN = generateFakeBSN();
 
 if (isValidBSN(input)) {
   console.log("Valid BSN");
 }
 
-const fake = generateFakeBSN();
-console.log(fake);
+console.log(fakeBSN);
+```
+
+### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bsn-validator/dist/index.global.js"></script>
+<script>
+  const input = "123456782";
+  const fakeBSN = bsnValidator.generateFakeBSN();
+
+  if (bsnValidator.isValidBSN(input)) {
+    console.log("Valid BSN");
+  }
+
+  console.log(fakeBSN);
+</script>
 ```
 
 ## API
@@ -41,17 +70,10 @@ console.log(fake);
 Validates a BSN using the Dutch 11-check.
 
 Rules:
+
 - Accepts only 8 or 9 digits.
 - Ignores leading/trailing spaces.
 - Returns `true` when the number passes the 11-check, otherwise `false`.
-
-Example:
-
-```ts
-isValidBSN("123456782");
-isValidBSN(" 123456782 ");
-isValidBSN("abc");
-```
 
 ### generateFakeBSN(): string
 
@@ -66,12 +88,6 @@ Notes:
 - Form input validation for Dutch BSN fields.
 - Backend request validation before processing.
 - Creating mock BSN data for tests and demos.
-
-## Development
-
-```bash
-npm run build
-```
 
 ## References
 
