@@ -7,13 +7,13 @@ A tiny TypeScript/JavaScript package for validating Dutch BSN (Burgerservicenumm
 ### npm
 
 ```bash
-npm install bsn-validator
+npm install @cuteminded/bsn-validator
 ```
 
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/bsn-validator/dist/index.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cuteminded/bsn-validator/dist/index.global.js"></script>
 ```
 
 ## Quick Start
@@ -21,7 +21,7 @@ npm install bsn-validator
 ### JavaScript
 
 ```js
-const { isValidBSN, generateFakeBSN } = require("bsn-validator");
+const { isValidBSN, generateFakeBSN } = require("@cuteminded/bsn-validator");
 const input = "123456782";
 const fakeBSN = generateFakeBSN();
 
@@ -35,7 +35,7 @@ console.log(fakeBSN);
 ### TypeScript / ESM
 
 ```ts
-import { isValidBSN, generateFakeBSN } from "bsn-validator";
+import { isValidBSN, generateFakeBSN } from "@cuteminded/bsn-validator";
 
 const input = "123456782";
 const fakeBSN = generateFakeBSN();
@@ -50,7 +50,7 @@ console.log(fakeBSN);
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/bsn-validator/dist/index.global.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@cuteminded/bsn-validator/dist/index.global.js"></script>
 <script>
   const input = "123456782";
   const fakeBSN = bsnValidator.generateFakeBSN();
