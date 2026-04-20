@@ -1,7 +1,7 @@
 {
-  "name": "bsn-validator",
+  "name": "@cuteminded/bsn-validator",
   "description": "A simple validator for Dutch BSN (Burgerservicenummer)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "tsup",
-    "publish": "npm run test && npm publish",
+    "pub": "npm publish --access public",
     "test": "npm run build && node --test test/*.test.js"
   },
   "keywords": [

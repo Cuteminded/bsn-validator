@@ -2,11 +2,13 @@ tsconfig.json
 tsup.config.ts
 
 .env
+.nvmrc
 .DS_Store
 .gitignore
 .gitattributes
 
 /.git
+/.github
 /src
 /test
 /.vscode
